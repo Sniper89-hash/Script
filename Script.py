@@ -7,7 +7,7 @@ from selenium.common.exceptions import TimeoutException, NoSuchElementException
 from selenium.webdriver.firefox.options import Options
 
 options = Options(); options.headless = False
-chrome_browser = webdriver.Chrome(options=options, executable_path=r'C:\Users\Dark\Desktop\chromedriver.exe')
+chrome_browser = webdriver.Chrome(options=options, executable_path=r'path\to\driver')
 chrome_browser.maximize_window()
 
 def wait_element(delay, xpath): WebDriverWait(chrome_browser, delay).until(EC.presence_of_element_located((By.XPATH, xpath)))
